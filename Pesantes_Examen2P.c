@@ -41,4 +41,29 @@ int main() {
             Tinsumos[i][j][1] = rand() % 50;      // Egresos aleatorios
         }
     }
+     // Creacion del menu
+    int opcion;
+    do {
+        printf("\nSeleccione una opción:\n");
+        printf("1) Detalle\n");
+        printf("2) Totales\n");
+        printf("0) Salir\n");
+        scanf("%d", &opcion);
+
+        switch (opcion) {
+            case 1:
+                imprimirDetalle(numInsumos, Tinsumos);
+                break;
+            case 2:
+                calcularTotales(numInsumos, Tinsumos);
+                break;
+            case 0:
+                printf("FIN\n");
+                break;
+            default:
+                printf("NUMERO NO VALIDO\n");
+        }
+    } while (opcion != 0);
+
+    return 0;
 }
