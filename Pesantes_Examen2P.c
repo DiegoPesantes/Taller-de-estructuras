@@ -26,3 +26,19 @@ void calcularTotales(int numInsumos, int insumos[Insumos][Meses][2]) {
         printf("Insumo %d - Total Ingresos: %d, Total Egresos: %d\n", i + 1, totalIngresos, totalEgresos);
     }
 }
+int main() {
+    // Generar el número de insumos aleatoriamente (entre 1 y 5)
+    srand(time(NULL));
+    int numInsumos = rand() % 5 + 1;
+
+    // Crear la matriz para almacenar los datos 
+    int Tinsumos[Insumos][Meses][2] = {0};
+
+    // Bucle para los ingresos y egresos
+    for (int i = 0; i < numInsumos; ++i) {
+        for (int j = 0; j < Meses; ++j) {
+            Tinsumos[i][j][0] = rand() % 100 + 1; // Ingresos aleatorios
+            Tinsumos[i][j][1] = rand() % 50;      // Egresos aleatorios
+        }
+    }
+}
