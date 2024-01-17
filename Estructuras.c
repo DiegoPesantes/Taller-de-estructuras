@@ -47,6 +47,7 @@ int main()
 }
 
     void ingresarDatosAlumno(struct alumno *alumno)
+    //Pide los datos
 {
     printf("Matricula: ");
     scanf("%d", &((*alumno).matricula));
@@ -67,4 +68,14 @@ int main()
     printf("Nota: ");
     scanf("%f", &((*alumno).nota));
     fflush(stdin);
+}
+    void mostrarDatosAlumno(struct alumno *alumno)
+{
+    //Funcion para imprimir los datos
+    printf("\nDatos del alumno:\n");
+    printf("Matricula: %d\n", (*alumno).matricula);
+    printf("Nombre: %s\n", (*alumno).nombre);
+    printf("Dirección: %s\n", (*alumno).direccion);
+    printf("Materia: %s\n", (*alumno).materia);
+    printf("Nota: %.2f\n", (*alumno).nota);
 }
