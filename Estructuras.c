@@ -45,3 +45,26 @@ int main()
 
     return 0;
 }
+
+    void ingresarDatosAlumno(struct alumno *alumno)
+{
+    printf("Matricula: ");
+    scanf("%d", &((*alumno).matricula));
+    fflush(stdin);
+
+    printf("Nombre: ");
+    fgets((*alumno).nombre, sizeof((*alumno).nombre), stdin);
+    (*alumno).nombre[strcspn((*alumno).nombre, "\n")] = '\0'; // Elimina el carácter de nueva línea
+
+    printf("Dirección: ");
+    fgets((*alumno).direccion, sizeof((*alumno).direccion), stdin);
+    (*alumno).direccion[strcspn((*alumno).direccion, "\n")] = '\0'; // Elimina el carácter de nueva línea
+
+    printf("Materia: ");
+    fgets((*alumno).materia, sizeof((*alumno).materia), stdin);
+    (*alumno).materia[strcspn((*alumno).materia, "\n")] = '\0'; // Elimina el carácter de nueva línea
+
+    printf("Nota: ");
+    scanf("%f", &((*alumno).nota));
+    fflush(stdin);
+}
