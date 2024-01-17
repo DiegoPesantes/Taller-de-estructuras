@@ -10,6 +10,7 @@ struct alumno
     char materia[50];
     float nota;
 };
+    
 //Creamos la funcion main junto con una variable para crear un menu
 int main()
 {
@@ -69,7 +70,7 @@ int main()
     scanf("%f", &((*alumno).nota));
     fflush(stdin);
 }
-    void mostrarDatosAlumno(struct alumno *alumno)
+    void mostrarDatosAlumno(const struct alumno *alumno)
 {
     //Funcion para imprimir los datos
     printf("\nDatos del alumno:\n");
