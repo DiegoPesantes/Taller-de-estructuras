@@ -15,4 +15,33 @@ int main()
 {
     int opcion;
     struct alumno alumnoActual;
+    do
+    {
+        // Menú de opciones
+        printf("\nMenu:\n");
+        printf("1. Ingresar datos de un alumno\n");
+        printf("2. Salir\n");
+        printf("Ingrese su opcion: ");
+        scanf("%d", &opcion);
+        fflush(stdin);
+
+        switch (opcion)
+        {
+        case 1:
+            // Opción para ingresar datos de un alumno
+            ingresarDatosAlumno(&alumnoActual);
+            break;
+        case 2:
+            // Opción para salir del programa
+            printf("Fin\n");
+            break;
+        default:
+            // Opción inválida
+            printf("Opcion invalida.\n");
+            break;
+        }
+
+    } while (opcion != 2);
+
+    return 0;
 }
